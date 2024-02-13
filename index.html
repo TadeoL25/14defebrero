@@ -12,25 +12,32 @@
     <header>
         <!-- place navbar here -->
     </header>
-    <main>
+    <main id="hero">
+        <video muted autoplay loop>
+            <source src="amor2.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+        
+
         <div class="cont">
-            <h1>Amor</h1>
-            <p>Descubre el porcentaje de amor entre dos personas</p>
+            <h1 style="color: rgb(245, 250, 253);">Amor</h1>
+            <p style="color: rgb(245, 250, 253);">Descubre el porcentaje de amor entre dos personas</p>
             
-            <p>Nombre del novio</p>
-            <input type="text" id="sname" class="form-control" placeholder="Él">
-            <p>Nombre de la novia</p>
-            <input type="text" id="fname" class="form-control" placeholder="Ella">
+            <div class="labelline" style="color: rgb(245, 250, 253);">Escribe el nombre del novio</div>
+            <input type="text" id="sname" class="inputC" >
+            <div class="labelline" style="color: rgb(245, 250, 253);">Escribe el nombre de la novia</div>
+            <input type="text" id="fname" class="inputC" >
             <br><br>
-            <button id="calculate-btn" class="btn" style="background-color: rgb(209, 63, 87); color: white;">Calcular</button>
+            <button type="button" id="calculate-btn" class="btn btnChido" style="color: white;">Calcular</button>
             <br><br>
-            <div id="result"></div>
-            <img id="love-image" src="qsmn.png" style="display: none; max-width: 200px;">
-            <audio id="love-sound" src="ruta-del-sonido.mp3"></audio>
+            <div id="result" style="color: aliceblue;"></div>
+            <img id="love-image" src="qsmn.png" style="display: none; max-width: 180px;" alt="perrito">
+            <audio id="love-sound" src="perrito.mp3"></audio>
             <br><br><br>
+            
         </div>
         
-        <div class="heart"></div>
+        
         
     </main>
     <footer>

@@ -1,13 +1,21 @@
 body {
-    background-color: pink;
-    
-    
+    margin: 0;
 }
 
 .cont {
     width: 80%; /* Anchura del contenedor */
     margin: 50px auto; /* Margen vertical y centrado horizontal */
-    text-align: center; /* Alinear el contenido al centro */
+    text-align: center; 
+    position: relative;
+    background-color: rgba(216, 112, 147, 0.592);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.inputC {
+    ::placeholder {
+        color: white; /* Cambia el color del placeholder a gris */
+      }
 }
 
 /* Centrar los inputs dentro del contenedor */
@@ -19,7 +27,7 @@ body {
 /* Media query para ajustar el diseño en dispositivos móviles */
 @media (max-width: 768px) {
     .cont {
-        width: 50%; /* Anchura del contenedor para dispositivos móviles */
+        width: 55%; /* Anchura del contenedor para dispositivos móviles */
     }
 }
 
@@ -34,7 +42,7 @@ body {
     0% {
         transform: rotate(-45deg) scale(1.07);
     }
-    80% {
+    70% {
         transform: rotate(-45deg) scale(1.0);
     }
 
@@ -44,10 +52,10 @@ body {
 }
   
 .heart {
-    position: relative;
+    position: absolute;
     width: 70px; 
     height: 70px;
-    left: 45%;
+    left: 48%;
     background-color: #ff4757;
     transform: rotate(-45deg);
     box-shadow: -10px 10px 90px #ff4757;
@@ -74,4 +82,80 @@ body {
     background-color: #ff4757;
     border-radius: 50%;
     box-shadow: -10px 10px 90px #ff4757;
+}
+
+.btn {
+    border: 1px solid #ff4757;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnChido:hover {
+    z-index: 2;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #c11221;
+    z-index: -2;
+    transition: 0.8s;
+}
+
+
+
+.btnChido::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btnChido:hover::before {
+    height: 180%;
+}
+
+input {
+    outline: none;
+    font-size: 20px;
+    padding: 0 30px;
+    line-height: 0px;
+    border-radius: 10px;
+    border: 2px solid white; 
+    background: transparent;
+    color: white;
+}
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 50px;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
 }
