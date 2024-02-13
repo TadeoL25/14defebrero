@@ -1,0 +1,77 @@
+body {
+    background-color: pink;
+    
+    
+}
+
+.cont {
+    width: 80%; /* Anchura del contenedor */
+    margin: 50px auto; /* Margen vertical y centrado horizontal */
+    text-align: center; /* Alinear el contenido al centro */
+}
+
+/* Centrar los inputs dentro del contenedor */
+.cont input[type="text"] {
+    width: 100%; /* Opcional: Ajusta el ancho de los inputs */
+    margin-bottom: 10px; /* Espacio entre los inputs */
+}
+
+/* Media query para ajustar el diseño en dispositivos móviles */
+@media (max-width: 768px) {
+    .cont {
+        width: 50%; /* Anchura del contenedor para dispositivos móviles */
+    }
+}
+
+/* Media query para ajustar el diseño en pantallas de computadora */
+@media (min-width: 1024px) {
+    .cont {
+        width: 20%; /* Anchura del contenedor para pantallas de computadora */
+    }
+}   
+
+@keyframes animate {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+  
+.heart {
+    position: relative;
+    width: 70px; 
+    height: 70px;
+    left: 45%;
+    background-color: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #ff4757;
+    animation: animate .8s linear infinite;
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background-color: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px #ff4757;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 70px;
+    height: 70px;
+    background-color: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px #ff4757;
+}
