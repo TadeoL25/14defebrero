@@ -2,6 +2,18 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: "Indie Flower", cursive;
+}
+
+p {
+    font-family: "Indie Flower", cursive;
+}
+
+div {
+    font-family: "Indie Flower", cursive;
+}
+
 .cont {
     width: 80%; /* Anchura del contenedor */
     margin: 50px auto; /* Margen vertical y centrado horizontal */
@@ -27,7 +39,7 @@ body {
 /* Media query para ajustar el diseño en dispositivos móviles */
 @media (max-width: 768px) {
     .cont {
-        width: 55%; /* Anchura del contenedor para dispositivos móviles */
+        width: 65%; /* Anchura del contenedor para dispositivos móviles */
     }
 }
 
@@ -85,7 +97,7 @@ body {
 }
 
 .btn {
-    border: 1px solid #ff4757;
+    border: 1px solid white;
     background: none;
     padding: 10px 20px;
     font-size: 20px;
@@ -95,6 +107,7 @@ body {
     transition: 0.8s;
     position: relative;
     overflow: hidden;
+    font-family: "Indie Flower", cursive;
 }
 
 .btnChido:hover {
